@@ -55,7 +55,7 @@ document.getElementById('orderBtn').addEventListener('click',()=>{
   const total = totalEl.textContent;
   const addons = [...addonInputs].filter(x=>x.checked).map(x=>x.value).join(", ") || "Tidak ada";
   const text = `Halo Srilex Buditra, saya ingin konsultasi/order layanan media sosial.%0A%0AMedia: ${media}%0AJasa: ${jasa}%0AJumlah: ${qty}%0AFitur tambahan: ${addons}%0AEstimasi: ${total}`;
-  window.open(`https://wa.me/6285156501234?text=${text}`,'_blank');
+  window.open(`https://wa.me/6282136238350?text=${text}`,'_blank');
 });
 
 document.querySelector('.menu-toggle').addEventListener('click',()=>{
