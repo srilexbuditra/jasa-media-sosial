@@ -1,1 +1,831 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Promosi Konten Media Sosial | Srilex Buditra</title>
+
+  <meta name="description"
+    content="Jasa promosi konten media sosial untuk Instagram, Facebook, TikTok dan YouTube.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #071022;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 6%;
+      background: rgba(5, 11, 27, .96);
+      border-bottom: 1px solid #26324d;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #3478ff;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #7d8cff;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .primary {
+      background: linear-gradient(90deg, #1768ff, #a32df1);
+      color: #fff;
+    }
+
+    .outline {
+      border: 1px solid #66718d;
+      color: #fff;
+    }
+
+    .hero {
+      padding: 90px 6%;
+      min-height: 570px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 40px;
+      background:
+        radial-gradient(circle at 80% 40%, #332073, transparent 35%),
+        linear-gradient(120deg, #050b1b, #091a36);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 13px;
+      border-radius: 6px;
+      background: #155ee8;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.1;
+      margin: 20px 0;
+    }
+
+    h1 span,
+    h2 span {
+      background: linear-gradient(90deg, #2682ff, #c239f1);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: #b9c3d5;
+      max-width: 650px;
+      font-size: 16px;
+    }
+
+    .actions {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .phone {
+      width: 260px;
+      height: 450px;
+      margin: auto;
+      padding: 30px 16px;
+      border: 7px solid #252d40;
+      border-radius: 38px;
+      background: #020611;
+      transform: rotate(6deg);
+      box-shadow: 0 30px 80px rgba(0,0,0,.6);
+    }
+
+    .phone-screen {
+      height: 100%;
+      border-radius: 25px;
+      padding: 25px 15px;
+      background: linear-gradient(160deg,#101d3b,#101029);
+    }
+
+    .metric {
+      margin-top: 25px;
+      padding: 18px;
+      border-radius: 12px;
+      background: #15223c;
+    }
+
+    .metric small {
+      color: #8e9bb3;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 27px;
+      margin: 8px 0;
+    }
+
+    .metric span {
+      color: #32dc92;
+      font-size: 12px;
+    }
+
+    section {
+      padding: 75px 6%;
+    }
+
+    .light {
+      background: #f5f7fb;
+      color: #111827;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      margin: 12px 0;
+    }
+
+    .section-title p {
+      color: #667085;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #fff;
+      color: #111827;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.07);
+    }
+
+    .card .icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #667085;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .calculator {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 20px;
+    }
+
+    .form {
+      background: #f8fafc;
+      color: #172033;
+      padding: 28px;
+      border-radius: 12px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      font-size: 13px;
+      margin: 20px 0 8px;
+    }
+
+    select,
+    input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #d5dae3;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .addons label {
+      font-weight: normal;
+      display: flex;
+      justify-content: space-between;
+      padding: 12px;
+      background: #fff;
+      border: 1px solid #e0e4eb;
+      border-radius: 8px;
+    }
+
+    .addons input {
+      width: auto;
+    }
+
+    .summary {
+      background: linear-gradient(150deg,#111f39,#091226);
+      padding: 28px;
+      border-radius: 12px;
+      border: 1px solid #2b3b5c;
+      align-self: start;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 16px 0;
+      color: #b4bed0;
+      font-size: 13px;
+    }
+
+    .total {
+      padding: 18px;
+      margin: 25px 0;
+      border-radius: 10px;
+      background: #18254a;
+    }
+
+    .total strong {
+      display: block;
+      font-size: 28px;
+      color: #b047ff;
+    }
+
+    .full {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .steps {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .step {
+      color: #111827;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    .step b {
+      display: grid;
+      place-items: center;
+      width: 45px;
+      height: 45px;
+      margin: auto;
+      border-radius: 50%;
+      background: #e9efff;
+      color: #216cff;
+    }
+
+    footer {
+      background: #050b18;
+      padding: 50px 6%;
+      color: #aab4c7;
+    }
+
+    footer h3 {
+      color: #fff;
+    }
+
+    footer p {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    @media(max-width:900px) {
+      nav {
+        display: none;
+      }
+
+      .hero,
+      .calculator {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .services {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width:600px) {
+      .services,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .hero {
+        padding: 60px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <span>&lt;/&gt;</span> Srilex Buditra
+  </div>
+
+  <nav>
+    <a href="../">Jasa Media Sosial</a>
+    <a href="#layanan">Layanan</a>
+    <a href="#estimasi">Estimasi Harga</a>
+    <a href="#cara-order">Cara Order</a>
+  </nav>
+
+  <a class="btn primary" href="#estimasi">
+    Hitung Estimasi
+  </a>
+</header>
+
+<section class="hero">
+
+  <div>
+    <span class="badge">PROMOSI KONTEN</span>
+
+    <h1>
+      Tingkatkan Jangkauan
+      <span>Konten Media Sosial Anda</span>
+    </h1>
+
+    <p>
+      Jasa promosi konten untuk membantu bisnis, brand,
+      creator dan personal brand menjangkau audiens yang
+      lebih relevan melalui strategi media sosial.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="#estimasi">
+        Hitung Estimasi Harga
+      </a>
+
+      <a class="btn outline" href="#layanan">
+        Lihat Layanan
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <div class="phone">
+      <div class="phone-screen">
+        <h3>Social Growth</h3>
+
+        <div class="metric">
+          <small>Total Reach</small>
+          <strong>25.7K</strong>
+          <span>↗ 32.4%</span>
+        </div>
+
+        <div class="metric">
+          <small>Engagement</small>
+          <strong>8.734</strong>
+          <span>↗ 18.6%</span>
+        </div>
+
+        <div class="metric">
+          <small>Profile Growth</small>
+          <strong>2.850</strong>
+          <span>↗ 24.8%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section id="layanan" class="light">
+
+  <div class="section-title">
+    <p>Layanan Kami</p>
+
+    <h2>
+      Promosi <span>Konten Media Sosial</span>
+    </h2>
+
+    <p>
+      Pilih layanan sesuai tujuan promosi Anda.
+    </p>
+  </div>
+
+  <div class="services">
+
+    <div class="card">
+      <div class="icon">📣</div>
+      <h3>Promosi Konten</h3>
+      <p>
+        Promosikan postingan, foto, Reels dan video
+        untuk meningkatkan jangkauan.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">👥</div>
+      <h3>Audience Growth</h3>
+      <p>
+        Strategi mendapatkan audiens baru yang
+        relevan dan aktif.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">❤️</div>
+      <h3>Engagement</h3>
+      <p>
+        Strategi meningkatkan interaksi dan
+        keterlibatan audiens.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📈</div>
+      <h3>Social Media Ads</h3>
+      <p>
+        Kampanye iklan melalui platform resmi
+        sesuai target audiens.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="estimasi">
+
+  <div class="section-title">
+    <p>ESTIMASI HARGA</p>
+
+    <h2>
+      Hitung <span>Estimasi Harga</span>
+    </h2>
+
+    <p>
+      Pilih media, jenis layanan, durasi dan fitur tambahan.
+    </p>
+  </div>
+
+  <div class="calculator">
+
+    <div class="form">
+
+      <label>1. Pilih Platform</label>
+
+      <select id="platform">
+        <option value="0">Instagram</option>
+        <option value="10000">Facebook</option>
+        <option value="15000">TikTok</option>
+        <option value="20000">YouTube</option>
+      </select>
+
+      <label>2. Jenis Layanan</label>
+
+      <select id="service">
+        <option value="75000">Promosi Konten</option>
+        <option value="100000">Audience Growth</option>
+        <option value="90000">Engagement</option>
+        <option value="150000">Social Media Ads</option>
+      </select>
+
+      <label>3. Durasi</label>
+
+      <select id="duration">
+        <option value="1">1 Hari</option>
+        <option value="7">7 Hari</option>
+        <option value="14">14 Hari</option>
+        <option value="30">30 Hari</option>
+      </select>
+
+      <label>4. Fitur Tambahan</label>
+
+      <div class="addons">
+
+        <label>
+          <span>
+            <input type="checkbox" value="25000">
+            Optimasi Profil
+          </span>
+          + Rp25.000
+        </label>
+
+        <label>
+          <span>
+            <input type="checkbox" value="30000">
+            Riset Audiens & Hashtag
+          </span>
+          + Rp30.000
+        </label>
+
+        <label>
+          <span>
+            <input type="checkbox" value="25000">
+            Laporan Performa
+          </span>
+          + Rp25.000
+        </label>
+
+        <label>
+          <span>
+            <input type="checkbox" value="50000">
+            Konsultasi Strategi
+          </span>
+          + Rp50.000
+        </label>
+
+      </div>
+
+    </div>
+
+    <div class="summary">
+
+      <h3>Ringkasan Estimasi</h3>
+
+      <div class="summary-row">
+        <span>Platform</span>
+        <strong id="platformText">Instagram</strong>
+      </div>
+
+      <div class="summary-row">
+        <span>Layanan</span>
+        <strong id="serviceText">Promosi Konten</strong>
+      </div>
+
+      <div class="summary-row">
+        <span>Durasi</span>
+        <strong id="durationText">1 Hari</strong>
+      </div>
+
+      <div class="total">
+        Total Estimasi
+        <strong id="total">
+          Rp 75.000
+        </strong>
+      </div>
+
+      <p style="font-size:11px;color:#9ca8bd">
+        Harga di atas merupakan estimasi awal.
+        Harga final dikonfirmasi setelah kebutuhan
+        layanan diperiksa.
+      </p>
+
+      <a id="whatsapp"
+         class="btn primary full"
+         target="_blank"
+         href="#">
+        Pesan via WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="cara-order" class="light">
+
+  <div class="section-title">
+    <h2>
+      Cara <span>Order</span>
+    </h2>
+  </div>
+
+  <div class="steps">
+
+    <div class="step">
+      <b>1</b>
+      <h3>Pilih Layanan</h3>
+      <p>Tentukan platform dan layanan.</p>
+    </div>
+
+    <div class="step">
+      <b>2</b>
+      <h3>Hitung Estimasi</h3>
+      <p>Gunakan formulir estimasi.</p>
+    </div>
+
+    <div class="step">
+      <b>3</b>
+      <h3>Konfirmasi</h3>
+      <p>Kirim detail kebutuhan.</p>
+    </div>
+
+    <div class="step">
+      <b>4</b>
+      <h3>Proses</h3>
+      <p>Layanan mulai dikerjakan.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <h3>&lt;/&gt; Srilex Buditra</h3>
+
+  <p>
+    Digital Solution & Social Growth
+  </p>
+
+  <p>
+    Jasa promosi konten dan solusi media sosial
+    untuk bisnis, brand dan creator.
+  </p>
+
+  <p>
+    WhatsApp: +62 821-3623-8350
+  </p>
+
+  <p>
+    © 2026 Srilex Buditra. All Rights Reserved.
+  </p>
+
+</footer>
+
+<script>
+
+  const platform = document.getElementById("platform");
+  const service = document.getElementById("service");
+  const duration = document.getElementById("duration");
+
+  const platformText =
+    document.getElementById("platformText");
+
+  const serviceText =
+    document.getElementById("serviceText");
+
+  const durationText =
+    document.getElementById("durationText");
+
+  const total =
+    document.getElementById("total");
+
+  const whatsapp =
+    document.getElementById("whatsapp");
+
+  function rupiah(number) {
+    return new Intl.NumberFormat(
+      "id-ID",
+      {
+        style: "currency",
+        currency: "IDR",
+        maximumFractionDigits: 0
+      }
+    ).format(number);
+  }
+
+  function calculate() {
+
+    const platformPrice =
+      Number(platform.value);
+
+    const servicePrice =
+      Number(service.value);
+
+    const days =
+      Number(duration.value);
+
+    let addons = 0;
+
+    document
+      .querySelectorAll(
+        ".addons input:checked"
+      )
+      .forEach(item => {
+        addons += Number(item.value);
+      });
+
+    const result =
+      servicePrice +
+      platformPrice +
+      addons +
+      ((days - 1) * 10000);
+
+    total.textContent =
+      rupiah(result);
+
+    platformText.textContent =
+      platform.options[
+        platform.selectedIndex
+      ].text;
+
+    serviceText.textContent =
+      service.options[
+        service.selectedIndex
+      ].text;
+
+    durationText.textContent =
+      duration.options[
+        duration.selectedIndex
+      ].text;
+
+    const message =
+      "Halo Srilex Buditra,%0A%0A" +
+      "Saya ingin memesan Promosi Konten.%0A" +
+      "Platform: " +
+      platformText.textContent +
+      "%0A" +
+      "Layanan: " +
+      serviceText.textContent +
+      "%0A" +
+      "Durasi: " +
+      durationText.textContent +
+      "%0A" +
+      "Estimasi: " +
+      total.textContent;
+
+    whatsapp.href =
+      "https://wa.me/6282136238350?text=" +
+      message;
+  }
+
+  platform.addEventListener(
+    "change",
+    calculate
+  );
+
+  service.addEventListener(
+    "change",
+    calculate
+  );
+
+  duration.addEventListener(
+    "change",
+    calculate
+  );
+
+  document
+    .querySelectorAll(
+      ".addons input"
+    )
+    .forEach(input => {
+      input.addEventListener(
+        "change",
+        calculate
+      );
+    });
+
+  calculate();
+
+</script>
+
+</body>
+</html>
