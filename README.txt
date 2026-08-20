@@ -17,7 +17,7 @@ Website statis responsive dengan:
 3. Untuk online hosting, upload `index.html`, `style.css`, dan `script.js` ke hosting/GitHub Pages.
 
 ## Yang perlu disesuaikan
-- Nomor WhatsApp di `script.js` (saat ini contoh `6285156501234`).
+- Nomor WhatsApp di `script.js` (saat ini contoh `6282136238350`).
 - Email/kontak di `index.html`.
 - Harga dan nama layanan di `index.html`.
 - Warna, logo, dan identitas brand di `style.css`.
